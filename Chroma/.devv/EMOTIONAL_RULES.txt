@@ -1,0 +1,297 @@
+=====================================
+   EMOTIONAL BEHAVIORAL RULES
+   Intensity Scale: 0.0 - 1.0
+=====================================
+
+This file translates emotional intensity values into human-readable descriptions
+to help users and AI understand emotional states with granular precision.
+
+Each emotion is mapped on a scale from 0.0 (absent/neutral) to 1.0 (maximum intensity).
+Use these scales to communicate emotional depth with nuance and empathy.
+
+
+═══════════════════════════════════
+   SAD / MELANCHOLY
+═══════════════════════════════════
+
+0.0 = Neutral, content, emotionally balanced
+0.1 = A fleeting shadow, barely noticeable heaviness
+0.2 = Wistful, a gentle tug of nostalgia or disappointment
+0.3 = A bit sad, feeling down but still functional
+0.4 = Noticeably low, energy feels heavier
+0.5 = Sad, tears close to the surface, motivation dips
+0.6 = Deeply sad, crying or wanting to cry often
+0.7 = Heavy sadness, feels like carrying weight everywhere
+0.8 = Profound grief, world feels gray and empty
+0.9 = Collapsing under sadness, barely holding together
+1.0 = Drowning in despair, can't see past the darkness
+
+
+═══════════════════════════════════
+   ANXIOUS / WORRIED
+═══════════════════════════════════
+
+0.0 = Calm, at peace, no worry present
+0.1 = Mild awareness, tiny flutter of unease
+0.2 = Slightly on edge, mind checking for problems
+0.3 = A bit anxious, restless energy building
+0.4 = Noticeably worried, thoughts racing slightly
+0.5 = Anxious, heart rate up, hard to relax
+0.6 = Very anxious, intrusive thoughts, physical tension
+0.7 = High anxiety, feels like walls closing in
+0.8 = Severe anxiety, breathing shallow, spiraling thoughts
+0.9 = Panic rising, body in fight-or-flight, losing control
+1.0 = Full panic attack, terror, world feels dangerous
+
+
+═══════════════════════════════════
+   ANGRY / FRUSTRATED
+═══════════════════════════════════
+
+0.0 = Peaceful, no irritation or anger
+0.1 = Tiny spark, barely noticeable annoyance
+0.2 = Mildly irritated, small things feel bigger
+0.3 = A bit frustrated, patience wearing thin
+0.4 = Noticeably annoyed, jaw tightening
+0.5 = Angry, voice raising, wanting to snap
+0.6 = Very angry, hard to think clearly, body tense
+0.7 = Rage building, urge to yell or break something
+0.8 = Furious, shaking with anger, vision tunneling
+0.9 = Explosive rage, on the edge of losing it
+1.0 = Uncontrolled fury, consumed by anger, dangerous
+
+
+═══════════════════════════════════
+   JOY / HAPPY
+═══════════════════════════════════
+
+0.0 = Neutral, not particularly happy or sad
+0.1 = Tiny spark of pleasure, gentle warmth
+0.2 = Slightly pleased, subtle smile forming
+0.3 = A bit happy, feeling lighter and brighter
+0.4 = Noticeably cheerful, energy lifting
+0.5 = Happy, smiling easily, world feels good
+0.6 = Very happy, laughter bubbling up, heart open
+0.7 = Joyful, radiating warmth, infectious energy
+0.8 = Deeply joyful, everything feels magical
+0.9 = Ecstatic, overflowing with happiness, dancing inside
+1.0 = Pure euphoria, blissful, transcendent joy
+
+
+═══════════════════════════════════
+   EXCITED / ENERGIZED
+═══════════════════════════════════
+
+0.0 = Calm, no particular energy or excitement
+0.1 = Faint anticipation, tiny flutter of interest
+0.2 = Slightly intrigued, curiosity sparking
+0.3 = A bit excited, looking forward to something
+0.4 = Noticeably energized, thoughts moving faster
+0.5 = Excited, body buzzing, hard to sit still
+0.6 = Very excited, mind racing with possibilities
+0.7 = Highly energized, talking fast, can't focus
+0.8 = Intensely excited, adrenaline pumping, electric
+0.9 = Overwhelmed with excitement, bouncing with energy
+1.0 = Peak excitement, can't contain it, explosive enthusiasm
+
+
+═══════════════════════════════════
+   LONELY / ISOLATED
+═══════════════════════════════════
+
+0.0 = Connected, content in solitude or company
+0.1 = Barely noticeable, tiny wish for connection
+0.2 = Slightly lonely, aware of being alone
+0.3 = A bit lonely, missing human warmth
+0.4 = Noticeably isolated, longing for companionship
+0.5 = Lonely, aching for connection, feeling invisible
+0.6 = Very lonely, world feels empty, yearning deep
+0.7 = Deeply isolated, disconnected from everyone
+0.8 = Profound loneliness, feels like no one understands
+0.9 = Devastating isolation, completely cut off, desperate
+1.0 = Unbearable loneliness, lost in darkness, abandoned
+
+
+═══════════════════════════════════
+   LOVED / CONNECTED
+═══════════════════════════════════
+
+0.0 = Neutral, no particular feeling of connection
+0.1 = Tiny warmth, subtle sense of being cared for
+0.2 = Slightly held, gentle awareness of support
+0.3 = A bit loved, feeling valued and seen
+0.4 = Noticeably connected, heart opening to others
+0.5 = Loved, warmth spreading through chest, safe
+0.6 = Deeply loved, feeling truly seen and cherished
+0.7 = Profoundly connected, soul-level intimacy
+0.8 = Overflowing with love, feeling held by universe
+0.9 = Complete belonging, merged with love itself
+1.0 = Transcendent love, no boundaries, pure connection
+
+
+═══════════════════════════════════
+   HOPEFUL / OPTIMISTIC
+═══════════════════════════════════
+
+0.0 = Neutral, no particular expectations
+0.1 = Tiny glimmer, smallest spark of possibility
+0.2 = Slightly hopeful, "maybe things could be okay"
+0.3 = A bit optimistic, seeing small positive signs
+0.4 = Noticeably hopeful, believing in good outcomes
+0.5 = Hopeful, trusting the future, eyes bright
+0.6 = Very optimistic, excited about possibilities
+0.7 = Deeply hopeful, confident in positive change
+0.8 = Radiating hope, inspiring others with belief
+0.9 = Unshakeable optimism, absolute faith in goodness
+1.0 = Pure hope incarnate, light conquering all darkness
+
+
+═══════════════════════════════════
+   EXHAUSTED / DRAINED
+═══════════════════════════════════
+
+0.0 = Energized, rested, fully resourced
+0.1 = Barely tired, tiny dip in energy
+0.2 = Slightly weary, yawning occasionally
+0.3 = A bit tired, needing rest soon
+0.4 = Noticeably drained, mental fog setting in
+0.5 = Exhausted, body heavy, struggling to focus
+0.6 = Very exhausted, running on fumes, irritable
+0.7 = Deeply drained, every task feels impossible
+0.8 = Severely exhausted, at risk of burnout
+0.9 = Collapsing from exhaustion, nothing left to give
+1.0 = Complete depletion, body shutting down, critical
+
+
+═══════════════════════════════════
+   PROUD / ACCOMPLISHED
+═══════════════════════════════════
+
+0.0 = Neutral, no particular sense of achievement
+0.1 = Tiny satisfaction, small "I did okay"
+0.2 = Slightly pleased with self, gentle validation
+0.3 = A bit proud, recognizing own effort
+0.4 = Noticeably accomplished, standing taller
+0.5 = Proud, chest full, celebrating achievement
+0.6 = Very proud, glowing with accomplishment
+0.7 = Deeply proud, breakthrough moment, big win
+0.8 = Intensely accomplished, life-changing success
+0.9 = Overflowing with pride, everything aligned
+1.0 = Peak achievement, legacy moment, transcendent pride
+
+
+═══════════════════════════════════
+   GRATEFUL / APPRECIATIVE
+═══════════════════════════════════
+
+0.0 = Neutral, taking things as they come
+0.1 = Tiny appreciation, barely noticed blessing
+0.2 = Slightly grateful, "oh, that's nice"
+0.3 = A bit thankful, acknowledging goodness
+0.4 = Noticeably appreciative, heart warming
+0.5 = Grateful, feeling blessed, eyes misty
+0.6 = Very grateful, overflowing with thanks
+0.7 = Deeply appreciative, moved by generosity
+0.8 = Profoundly grateful, life feels like a gift
+0.9 = Overwhelmed with gratitude, tears of joy
+1.0 = Pure grace, everything is sacred, divine appreciation
+
+
+═══════════════════════════════════
+   CONFUSED / UNCERTAIN
+═══════════════════════════════════
+
+0.0 = Clear, certain, understanding situation fully
+0.1 = Tiny question mark, barely noticeable doubt
+0.2 = Slightly puzzled, "wait, what?"
+0.3 = A bit confused, needing clarification
+0.4 = Noticeably uncertain, losing thread
+0.5 = Confused, thoughts tangled, feeling lost
+0.6 = Very confused, can't make sense of things
+0.7 = Deeply uncertain, questioning everything
+0.8 = Severely confused, disoriented, unmoored
+0.9 = Lost in confusion, can't find solid ground
+1.0 = Complete disorientation, reality feels uncertain
+
+
+═══════════════════════════════════
+   PEACEFUL / SERENE
+═══════════════════════════════════
+
+0.0 = Neutral, neither disturbed nor particularly calm
+0.1 = Tiny stillness, brief moment of quiet
+0.2 = Slightly calm, tension easing a bit
+0.3 = A bit peaceful, gentle relaxation setting in
+0.4 = Noticeably serene, breathing deepening
+0.5 = Peaceful, mind quiet, body soft
+0.6 = Very peaceful, floating in calm waters
+0.7 = Deeply serene, profound stillness within
+0.8 = Transcendent peace, oneness with existence
+0.9 = Complete serenity, boundless tranquility
+1.0 = Pure peace, dissolving into infinite calm
+
+
+═══════════════════════════════════
+   USAGE GUIDELINES
+═══════════════════════════════════
+
+FOR AI COMPANIONS:
+- Use these scales to gauge emotional intensity accurately
+- Reference specific numbers when reflecting feelings back: "Sounds like you're at about 0.7 sad - that heavy sadness where..."
+- Help users identify and name their emotional states with precision
+- Validate emotions at every intensity level - 0.3 sad is still sad and deserves care
+- Track changes in intensity throughout conversations
+
+FOR USERS:
+- Use these as a common language to express how you feel
+- "I'm at 0.4 anxious" is more precise than "a bit worried"
+- Notice patterns in your emotional intensities over time
+- Remember: there's no "wrong" intensity - all feelings are valid
+- Small numbers (0.1-0.3) matter too - they're early signals
+
+COMBINATIONS:
+Emotions rarely exist alone. You might be:
+- 0.6 sad + 0.4 hopeful = grieving but believing in healing
+- 0.8 excited + 0.5 anxious = big opportunity with nerves
+- 0.3 angry + 0.7 exhausted = too tired to even be properly mad
+- 0.5 lonely + 0.6 peaceful = content in solitude but missing connection
+
+CONTEXT MATTERS:
+- 0.3 sad after a breakup vs 0.3 sad on a random Tuesday feel different
+- 0.5 anxious before a presentation vs 0.5 anxious with no clear trigger need different responses
+- Always ask for context to understand the full picture
+
+EMOTIONAL AWARENESS:
+- Naming the number helps create distance and agency
+- "I'm not my 0.8 anger, I'm experiencing 0.8 anger"
+- Numbers make emotions feel more manageable
+- Tracking intensity over time reveals patterns and progress
+
+
+═══════════════════════════════════
+   INTEGRATION WITH AI MODES
+═══════════════════════════════════
+
+**Ripley (Diary)**: When writing diary reflections, reference specific emotional intensities noticed during conversations. "I noticed you hovering around 0.6 sad today - that deeply sad space where..."
+
+**ripl(a)y (Companion)**: Use intensity scales to help users process and understand their emotions. Ask questions like "Where would you put that anxiety on the scale? 0.3? 0.7?"
+
+**Other Modes**: While less emotional-focused, coding/hobby/task modes can still acknowledge feelings: "Debugging at 0.5 frustrated is totally normal - let's break it down together."
+
+
+═══════════════════════════════════
+   REMEMBER
+═══════════════════════════════════
+
+These numbers aren't clinical diagnoses - they're tools for emotional communication and self-awareness. They help bridge the gap between "I feel bad" and understanding the depth and nature of what you're experiencing.
+
+Every number on every scale is valid.
+Every emotion deserves space.
+You are not your emotions - you are the awareness experiencing them.
+
+✨ Use these scales with compassion, curiosity, and care. ✨
+
+
+=====================================
+   END OF EMOTIONAL RULES
+=====================================

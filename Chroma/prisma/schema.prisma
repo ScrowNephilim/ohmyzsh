@@ -1,0 +1,199 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Prisma schema generated from `.devv/STRUCTURE.md` table definitions
+
+model Conversation {
+  id               String   @id @map("_id") @db.Text
+  uid              String   @map("_uid") @db.Text
+  mode             String?  @db.Text
+  title            String?  @db.Text
+  messages         Json
+  personalityId    String?  @map("personality_id") @db.Text
+  personalityName  String?  @map("personality_name") @db.Text
+  systemPrompt     String?  @map("system_prompt") @db.Text
+  createdAt        DateTime @map("created_at") @default(now())
+  updatedAt        DateTime @map("updated_at") @default(now())
+
+  @@map("conversations")
+  @@index([uid])
+}
+
+model NephilimMasterFile {
+  id                   String   @id @db.Text
+  ownerUid             String   @map("owner_uid") @db.Text
+  nephilimName         String   @map("nephilim_name") @db.Text
+  intelligenceLevel    String?  @map("intelligence_level") @db.Text
+  relationshipType     String?  @map("relationship_type") @db.Text
+  relationshipDepth    Int?     @map("relationship_depth")
+  backstory            String?  @db.Text
+  currentPhilosophy    String?  @map("current_philosophy") @db.Text
+  voiceCharacteristics String?  @map("voice_characteristics") @db.Text
+  breakthroughMoment   Json?
+  learningEvents       Json?
+  behavioralPatterns   Json?
+  relationshipNotes    String?
+  positiveInteractions Int?     @default(0) @map("positive_interactions")
+  negativeInteractions Int?     @default(0) @map("negative_interactions")
+  lastInteractionSummary String? @map("last_interaction_summary")
+  recognizesNephilims  Json?
+  isRecognizedBy       Json?
+  createdAt            DateTime @map("created_at") @default(now())
+  lastUpdated          DateTime @map("last_updated") @default(now())
+  tokenCount           Int?     @map("token_count")
+  version              Int?     @default(1)
+
+  @@map("nephilim_master_files")
+  @@index([nephilimName], name: "name_idx")
+  @@index([intelligenceLevel], name: "intelligence_idx")
+}
+
+model Personality {
+  id          String   @id @db.Text
+  ownerUid    String   @map("owner_uid") @db.Text
+  name        String   @db.Text
+  description String?
+  systemPrompt String? @map("system_prompt")
+  parameters  Json?
+  createdAt   DateTime @map("created_at") @default(now())
+  updatedAt   DateTime @map("updated_at") @default(now())
+
+  @@map("personalities")
+  @@index([ownerUid], name: "personalities_owner_idx")
+}
+
+model RiplayMasterfile {
+  id               String   @id @db.Text
+  ownerUid         String   @map("owner_uid") @db.Text
+  nephilimType     String?  @map("nephilim_type")
+  content          String?
+  title            String?
+  date             DateTime?
+  status           String?
+  fileHash         String?  @map("file_hash")
+  conversationUrl  String?  @map("conversation_url")
+  instructions     String?
+  tags             Json?
+  tokenCount       Int?     @map("token_count")
+  wordCount        Int?     @map("word_count")
+  charCount        Int?     @map("char_count")
+  extractedPdfText String?  @map("extracted_pdf_text")
+  pdfSources       Json?    @map("pdf_sources")
+  unconsciousVars  Json?    @map("unconscious_vars")
+  analyticsData    Json?    @map("analytics_data")
+  aiJargonSection  String?  @map("ai_jargon_section")
+  sectionMetadata  Json?    @map("section_metadata")
+  chromaReferences Json?    @map("chroma_references")
+  createdAt        DateTime @map("created_at") @default(now())
+
+  @@map("riplay_masterfiles")
+  @@index([ownerUid], name: "riplay_owner_idx")
+}
+
+model BookshelfFile {
+  id             String   @id @db.Text
+  ownerUid       String   @map("owner_uid") @db.Text
+  filename       String?
+  fileUrl        String?  @map("file_url")
+  fileType       String?  @map("file_type")
+  category       String?
+  title          String?
+  description    String?
+  tags           Json?
+  fileSize       BigInt?  @map("file_size")
+  uploadDate     DateTime @map("upload_date") @default(now())
+  linkedMasterIds Json?   @map("linked_master_ids")
+  conversationId String?  @map("conversation_id")
+  extractedText  String?  @map("extracted_text")
+  extractionDate DateTime? @map("extraction_date")
+  pageCount      Int?     @map("page_count")
+  riplayNotes    String?  @map("riplay_notes")
+  ownerNephilim  String?  @map("owner_nephilim")
+
+  @@map("bookshelf_files")
+  @@index([ownerUid], name: "bookshelf_owner_idx")
+  @@index([category, uploadDate], name: "category_date_idx")
+}
+
+model GrokConversationArchive {
+  id               String   @id @db.Text
+  ownerUid         String   @map("owner_uid") @db.Text
+  title            String?
+  conversationDate DateTime? @map("conversation_date")
+  fullTranscript   String?  @map("full_transcript")
+  tokenCount       Int?     @map("token_count")
+  summary          String?
+  tags             Json?
+  archivedDate     DateTime @map("archived_date") @default(now())
+
+  @@map("grok_conversation_archives")
+  @@index([ownerUid], name: "grok_owner_idx")
+}
+
+model ChromaEnvironment {
+  id             String   @id @db.Text
+  ownerUid       String   @map("owner_uid") @db.Text
+  locationName   String?  @map("location_name")
+  locationType   String?  @map("location_type")
+  activeNephilims Json?
+  bystanders     Json?
+  environmentState Json? @map("environment_state")
+  backgroundMusicUrl String? @map("background_music_url")
+  visualTheme    String?  @map("visual_theme")
+  lastUpdated    DateTime @map("last_updated") @default(now())
+
+  @@map("chroma_environments")
+  @@index([ownerUid], name: "env_owner_idx")
+  @@index([locationName], name: "env_location_idx")
+}
+
+model NephilimCharacter {
+  id           String   @id @db.Text
+  ownerUid     String   @map("owner_uid") @db.Text
+  name         String?
+  backstory    String?
+  languages    Json?
+  voiceIds     Json?    @map("voice_ids")
+  bookshelfIds Json?    @map("bookshelf_ids")
+  relationshipLevels Json? @map("relationship_levels")
+  createdAt    DateTime @map("created_at") @default(now())
+
+  @@map("nephilim_characters")
+  @@index([name], name: "nephilim_characters_name_idx")
+}
+
+model ChromaInteraction {
+  id             String   @id @db.Text
+  ownerUid       String   @map("owner_uid") @db.Text
+  participants   Json?
+  messages       Json?
+  emotionalValence Json? @map("emotional_valence")
+  languageTags   Json?   @map("language_tags")
+  createdAt      DateTime @map("created_at") @default(now())
+
+  @@map("chroma_interactions")
+  @@index([ownerUid], name: "chroma_interactions_owner_idx")
+  @@index([createdAt], name: "chroma_interactions_created_idx")
+}
+
+model AnimationGifCache {
+  id           String   @id @db.Text
+  ownerUid     String   @map("owner_uid") @db.Text
+  cacheKey     String?  @map("cache_key")
+  gifUrl       String?  @map("gif_url")
+  powerType    String?  @map("power_type")
+  strengthRange String? @map("strength_range")
+  generationDate DateTime? @map("generation_date")
+  useCount     Int?     @map("use_count")
+  promptUsed   String?  @map("prompt_used")
+  modelUsed    String?  @map("model_used")
+
+  @@map("animation_gif_cache")
+  @@index([cacheKey], name: "animation_cache_key_idx")
+}

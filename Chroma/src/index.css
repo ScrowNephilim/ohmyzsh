@@ -1,0 +1,1006 @@
+/**
+ * =====================================
+ *    CHROMA: THE HAPTIC HYPERBOREA
+ *         DARK CYBER DESIGN SYSTEM
+ * =====================================
+ * 
+ * Project: AI Companion Platform
+ * Type: Multi-dimensional Chat Experience
+ * 
+ * DESIGN PHILOSOPHY
+ * -----------------
+ * Core Principle: Immersive cyber-mystical aesthetics with matrix green accents
+ * Design Style: Dark Cyber / Neo-Matrix with warm empathetic touches
+ * Emotion Goal: Mystery, depth, digital transcendence
+ * 
+ * COLOR SYSTEM (HSL FORMAT)
+ * -------------
+ * Primary: 262 75% 55% - Gentle purple (warm, nurturing)
+ * Secondary: 142 65% 45% - Nurturing green (matrix accent, trust)
+ * Accent: 24 90% 60% - Warm orange (energy, joy)
+ * Joy: 280 80% 70% - Soft violet (celebration)
+ * Empathy: 340 75% 65% - Tender pink (emotional connection)
+ * Cyber: 142 70% 45% - Matrix green (digital transcendence)
+ * 
+ * TYPOGRAPHY
+ * ----------
+ * Display: "Fira Code", "Courier New", monospace - Matrix code aesthetic
+ * Body: System monospace stack
+ * Atmospheric: Dynamic based on temperature/location (see atmosphere-engine.ts)
+ * 
+ * INTERACTIONS
+ * ------------
+ * Transitions: 300ms ease for digital feel
+ * States: Complete coverage with warm empathy
+ * Animations: Matrix cascade, wormhole effects, cyber glows
+ * 
+ * ATMOSPHERIC ANIMATIONS
+ * ----------------------
+ * Temperature-based: shimmer-cold, heat-shimmer, warm-glow
+ * Power activations: glitch-reality, pressure-wave, conqueror-pulse
+ * Weather effects: rain-flicker, fog-drift, snow-sparkle
+ * ====================================
+ */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Color Palette */
+    --background: 0 0% 0%; /* Pure black */
+    --foreground: 0 0% 90%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 90%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 90%;
+    --primary: 142 70% 45%; /* Matrix green */
+    --primary-foreground: 0 0% 0%;
+    --secondary: 262 75% 55%; /* Gentle purple */
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 142 70% 45%; /* Matrix green */
+    --accent-foreground: 0 0% 0%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 142 70% 30%;
+    --input: 0 0% 20%;
+    --ring: 142 70% 45%;
+    --radius: 0.75rem; /* Softer feel */
+    
+    /* Emotional colors */
+    --joy: 280 80% 70%;
+    --empathy: 340 75% 65%;
+    --warmth: 24 90% 60%;
+    --cyber: 142 70% 45%;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Fira Code", "Courier New", monospace;
+  }
+}
+
+@layer utilities {
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 ease-in-out;
+  }
+  .hover-lift:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+
+  /* Warm glow effect */
+  .warm-glow {
+    @apply transition-all duration-300;
+    box-shadow: 0 0 20px rgba(142, 205, 126, 0.3);
+  }
+  .warm-glow:hover {
+    box-shadow: 0 0 30px rgba(142, 205, 126, 0.5);
+  }
+
+  /* Matrix effects */
+  .matrix-glow {
+    text-shadow: 0 0 10px rgba(142, 205, 126, 0.8),
+                 0 0 20px rgba(142, 205, 126, 0.5);
+  }
+
+  .matrix-cascade {
+    animation: cascade 20s linear infinite;
+  }
+
+  /* Wormhole portal animation */
+  .wormhole-animation {
+    animation: wormhole 6s ease-in-out infinite;
+  }
+
+  /* Text gradient */
+  .text-warm-gradient {
+    background: linear-gradient(135deg, hsl(262, 75%, 65%), hsl(142, 65%, 55%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Celebration animation */
+  .animate-celebrate {
+    animation: celebrate 0.6s ease-in-out;
+  }
+
+  /* Gentle pulse for attention */
+  .animate-gentle-pulse {
+    animation: gentle-pulse 2s ease-in-out infinite;
+  }
+
+  /* Pixelated filter for retro/cyber effect */
+  .pixelated {
+    image-rendering: pixelated;
+  }
+
+  /* Gear 5 neon contour animation */
+  .gear5-neon-active {
+    animation: gear5-neon-pulse 2s ease-in-out infinite;
+  }
+}
+
+/* ===== ATMOSPHERIC ANIMATIONS ===== */
+
+/* Temperature-based animations */
+@keyframes shimmer-cold {
+  0%, 100% { opacity: 0.85; text-shadow: 0 0 8px rgba(100, 200, 255, 0.6); }
+  50% { opacity: 1; text-shadow: 0 0 15px rgba(150, 220, 255, 0.9); }
+}
+
+@keyframes heat-shimmer {
+  0%, 100% { 
+    opacity: 0.9; 
+    text-shadow: 0 0 10px rgba(255, 150, 50, 0.6);
+    transform: translateY(0px);
+  }
+  25% { transform: translateY(-1px); }
+  50% { 
+    opacity: 1; 
+    text-shadow: 0 0 20px rgba(255, 120, 30, 0.9);
+    transform: translateY(0px);
+  }
+  75% { transform: translateY(1px); }
+}
+
+@keyframes warm-glow {
+  0%, 100% { text-shadow: 0 0 6px rgba(255, 200, 100, 0.5); }
+  50% { text-shadow: 0 0 12px rgba(255, 220, 120, 0.8); }
+}
+
+@keyframes intense-heat {
+  0%, 100% { 
+    text-shadow: 0 0 15px rgba(255, 80, 40, 0.8), 0 0 30px rgba(255, 100, 50, 0.4);
+    transform: scale(1);
+  }
+  50% { 
+    text-shadow: 0 0 25px rgba(255, 60, 20, 1), 0 0 50px rgba(255, 80, 30, 0.6);
+    transform: scale(1.02);
+  }
+}
+
+/* Weather animations */
+@keyframes rain-flicker {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 0.5; }
+}
+
+@keyframes fog-drift {
+  0%, 100% { 
+    opacity: 0.6; 
+    text-shadow: 0 0 10px rgba(180, 180, 200, 0.8);
+  }
+  50% { 
+    opacity: 0.7; 
+    text-shadow: 0 0 15px rgba(200, 200, 220, 1);
+  }
+}
+
+@keyframes snow-sparkle {
+  0%, 100% { 
+    text-shadow: 0 0 12px rgba(200, 220, 255, 0.8);
+    transform: translateY(0px);
+  }
+  50% { 
+    text-shadow: 0 0 20px rgba(220, 235, 255, 1);
+    transform: translateY(-2px);
+  }
+}
+
+/* Power activation animations */
+@keyframes glitch-reality {
+  0%, 100% { 
+    transform: translateX(0) skewX(0deg);
+    text-shadow: 0 0 20px rgba(200, 100, 255, 0.9), 0 0 40px rgba(150, 50, 255, 0.6);
+  }
+  10% { 
+    transform: translateX(-2px) skewX(-5deg);
+    text-shadow: -5px 0 20px rgba(255, 0, 255, 0.9), 5px 0 20px rgba(0, 255, 255, 0.9);
+  }
+  20% { 
+    transform: translateX(2px) skewX(5deg);
+    text-shadow: 5px 0 20px rgba(255, 0, 255, 0.9), -5px 0 20px rgba(0, 255, 255, 0.9);
+  }
+  30% { transform: translateX(0) skewX(0deg); }
+}
+
+@keyframes pressure-wave {
+  0% { 
+    transform: scale(1);
+    text-shadow: 0 0 20px rgba(255, 80, 50, 0.9), 0 0 40px rgba(255, 50, 30, 0.6);
+  }
+  50% { 
+    transform: scale(1.1);
+    text-shadow: 0 0 40px rgba(255, 100, 60, 1), 0 0 80px rgba(255, 80, 50, 0.8);
+  }
+  100% { 
+    transform: scale(1);
+    text-shadow: 0 0 20px rgba(255, 80, 50, 0.9), 0 0 40px rgba(255, 50, 30, 0.6);
+  }
+}
+
+@keyframes conqueror-pulse {
+  0%, 100% { 
+    transform: scale(1);
+    text-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 60px rgba(200, 0, 0, 0.8);
+  }
+  50% { 
+    transform: scale(1.15);
+    text-shadow: 0 0 50px rgba(255, 0, 0, 1), 0 0 100px rgba(255, 50, 50, 0.9), 0 0 150px rgba(200, 0, 0, 0.6);
+  }
+}
+
+@keyframes power-surge {
+  0% { 
+    opacity: 0.7;
+    transform: scale(0.95);
+    text-shadow: 0 0 15px rgba(255, 220, 100, 0.8);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.05);
+    text-shadow: 0 0 30px rgba(255, 240, 120, 1), 0 0 60px rgba(255, 220, 80, 0.7);
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+    text-shadow: 0 0 20px rgba(255, 230, 110, 0.9);
+  }
+}
+
+/* Location-specific animations */
+@keyframes pulse-bass {
+  0%, 100% { 
+    transform: scale(1);
+    text-shadow: 0 0 15px rgba(220, 100, 255, 0.8);
+  }
+  50% { 
+    transform: scale(1.05);
+    text-shadow: 0 0 25px rgba(240, 120, 255, 1);
+  }
+}
+
+/* Matrix and cyber effects */
+@keyframes cascade {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes wormhole {
+  0%, 100% { 
+    transform: scale(1) rotate(0deg);
+    filter: blur(0px);
+  }
+  50% { 
+    transform: scale(1.1) rotate(180deg);
+    filter: blur(2px);
+  }
+}
+
+@keyframes celebrate {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1) rotate(-5deg); }
+  50% { transform: scale(1.15) rotate(5deg); }
+  75% { transform: scale(1.1) rotate(-3deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(0.98); }
+}
+
+/* ========================================
+ * TEXT EFFECT ANIMATIONS
+ * Dynamic text styling for immersive Chroma
+ * ======================================== */
+
+/* Glitch effect - reality breaking */
+.animate-glitch-text {
+  animation: glitch-anim 1s ease-in-out infinite;
+}
+
+@keyframes glitch-anim {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+/* Shimmer effect - magical sparkle */
+.animate-shimmer-text {
+  animation: shimmer-anim 2s ease-in-out infinite;
+}
+
+@keyframes shimmer-anim {
+  0%, 100% { opacity: 1; filter: brightness(1); }
+  50% { opacity: 0.7; filter: brightness(1.5); }
+}
+
+/* Pulse effect - attention drawing */
+.animate-pulse-text {
+  animation: pulse-anim 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-anim {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.9; }
+}
+
+/* Matrix effect - cascading code */
+.animate-matrix-text {
+  animation: matrix-anim 3s linear infinite;
+}
+
+@keyframes matrix-anim {
+  0% { opacity: 0; transform: translateY(-10px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
+}
+
+/* Fade effect - subtle appearance */
+.animate-fade-text {
+  animation: fade-anim 3s ease-in-out infinite;
+}
+
+@keyframes fade-anim {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Wave effect - flowing motion */
+.animate-wave-text {
+  animation: wave-anim 2s ease-in-out infinite;
+}
+
+@keyframes wave-anim {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-3px); }
+  75% { transform: translateY(3px); }
+}
+
+/* Fire effect - flickering flames */
+.animate-fire-text {
+  animation: fire-anim 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes fire-anim {
+  0% { 
+    text-shadow: 0 0 5px hsl(15 100% 50%), 0 0 10px hsl(30 100% 50%);
+    transform: translateY(0);
+  }
+  100% { 
+    text-shadow: 0 0 10px hsl(30 100% 50%), 0 0 15px hsl(45 100% 50%);
+    transform: translateY(-2px);
+  }
+}
+
+/* Ice effect - frozen crystalline */
+.animate-ice-text {
+  animation: ice-anim 4s ease-in-out infinite;
+}
+
+@keyframes ice-anim {
+  0%, 100% { 
+    text-shadow: 0 0 5px hsl(200 60% 70%), 0 0 10px hsl(200 60% 80%);
+  }
+  50% { 
+    text-shadow: 0 0 10px hsl(200 70% 80%), 0 0 20px hsl(200 70% 90%);
+  }
+}
+
+/* Electric effect - crackling energy */
+.animate-electric-text {
+  animation: electric-anim 0.3s ease-in-out infinite;
+}
+
+@keyframes electric-anim {
+  0%, 100% { 
+    text-shadow: 0 0 5px hsl(200 100% 60%);
+    opacity: 1;
+  }
+  50% { 
+    text-shadow: 0 0 15px hsl(200 100% 70%), 0 0 25px hsl(200 100% 80%);
+    opacity: 0.9;
+  }
+}
+
+/* Shadow effect - depth and weight */
+.animate-shadow-text {
+  animation: shadow-anim 2s ease-in-out infinite;
+}
+
+@keyframes shadow-anim {
+  0%, 100% { 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  }
+  50% { 
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.7), -2px -2px 4px rgba(0,0,0,0.3);
+  }
+}
+
+/* Neon effect - glowing signage */
+.animate-neon-text {
+  animation: neon-anim 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-anim {
+  0% { 
+    text-shadow: 
+      0 0 5px hsl(142 70% 45%),
+      0 0 10px hsl(142 70% 45%),
+      0 0 15px hsl(142 70% 45%);
+  }
+  100% { 
+    text-shadow: 
+      0 0 10px hsl(142 70% 45%),
+      0 0 20px hsl(142 70% 45%),
+      0 0 30px hsl(142 70% 45%),
+      0 0 40px hsl(142 70% 45%);
+  }
+}
+
+/* Handwriting font */
+.font-handwriting {
+  font-family: 'Brush Script MT', 'Lucida Handwriting', cursive;
+  letter-spacing: 0.05em;
+}
+
+/* ========================================
+ * WEATHER TRANSITION ANIMATIONS
+ * Immersive visual transitions between weather states
+ * ======================================== */
+
+/* General fade-in-out for transition text */
+@keyframes fade-in-out {
+  0% { opacity: 0; transform: translateY(10px); }
+  15% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
+
+/* Rain starting - clouds darken, drops begin */
+.weather-rain-starting {
+  animation: rain-start 3s ease-in-out forwards;
+  background: radial-gradient(
+    ellipse at 50% 0%, 
+    rgba(50, 70, 100, 0) 0%, 
+    rgba(50, 70, 100, 0.3) 50%, 
+    rgba(40, 60, 90, 0.5) 100%
+  );
+}
+
+@keyframes rain-start {
+  0% { opacity: 0; }
+  25% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+/* Storm building - thunder, lightning, dark clouds */
+.weather-storm-building {
+  animation: storm-build 4s ease-in-out forwards;
+  background: radial-gradient(
+    ellipse at 50% 0%, 
+    rgba(20, 20, 40, 0) 0%, 
+    rgba(30, 30, 50, 0.5) 40%, 
+    rgba(20, 20, 35, 0.7) 100%
+  );
+}
+
+@keyframes storm-build {
+  0% { opacity: 0; }
+  10%, 15% { opacity: 0.2; } /* Lightning flash */
+  20% { opacity: 0.4; }
+  35%, 40% { opacity: 0.5; } /* Lightning flash */
+  60% { opacity: 0.6; }
+  75%, 77% { opacity: 0.8; } /* Lightning flash */
+  100% { opacity: 0; }
+}
+
+/* Storm intensifying - rain gets heavier */
+.weather-storm-intensifying {
+  animation: storm-intensify 2.5s ease-in-out forwards;
+  background: linear-gradient(
+    to bottom, 
+    rgba(20, 30, 45, 0) 0%, 
+    rgba(25, 35, 50, 0.6) 100%
+  );
+}
+
+@keyframes storm-intensify {
+  0% { opacity: 0; }
+  30% { opacity: 0.5; }
+  45%, 48% { opacity: 0.7; } /* Lightning */
+  70%, 72% { opacity: 0.8; } /* Lightning */
+  100% { opacity: 0; }
+}
+
+/* Rain stopping - clouds part, light returns */
+.weather-rain-stopping {
+  animation: rain-stop 3.5s ease-out forwards;
+  background: radial-gradient(
+    ellipse at 50% 50%, 
+    rgba(150, 170, 190, 0.4) 0%, 
+    rgba(180, 190, 210, 0.2) 50%, 
+    rgba(200, 210, 230, 0) 100%
+  );
+}
+
+@keyframes rain-stop {
+  0% { opacity: 0.5; }
+  40% { opacity: 0.4; }
+  70% { opacity: 0.2; }
+  100% { opacity: 0; }
+}
+
+/* Storm calming - thunder fades, rain softens */
+.weather-storm-calming {
+  animation: storm-calm 3s ease-out forwards;
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgba(40, 50, 70, 0.6) 0%, 
+    rgba(60, 70, 90, 0.3) 50%, 
+    rgba(80, 90, 110, 0) 100%
+  );
+}
+
+@keyframes storm-calm {
+  0% { opacity: 0.6; }
+  20%, 22% { opacity: 0.7; } /* Last lightning */
+  50% { opacity: 0.4; }
+  80% { opacity: 0.2; }
+  100% { opacity: 0; }
+}
+
+/* Storm ending - complete clearing */
+.weather-storm-ending {
+  animation: storm-end 4s ease-out forwards;
+  background: radial-gradient(
+    circle at 50% 0%, 
+    rgba(60, 70, 90, 0.5) 0%, 
+    rgba(100, 120, 150, 0.3) 40%, 
+    rgba(180, 200, 230, 0) 100%
+  );
+}
+
+@keyframes storm-end {
+  0% { opacity: 0.5; }
+  15%, 17% { opacity: 0.6; } /* Final lightning */
+  50% { opacity: 0.3; }
+  80% { opacity: 0.1; }
+  100% { opacity: 0; }
+}
+
+/* Fog rolling in - gradual obscuring */
+.weather-fog-rolling {
+  animation: fog-roll 5s ease-in forwards;
+  background: radial-gradient(
+    circle at 50% 100%, 
+    rgba(180, 185, 195, 0) 0%, 
+    rgba(160, 165, 175, 0.5) 40%, 
+    rgba(140, 145, 160, 0.8) 100%
+  );
+}
+
+@keyframes fog-roll {
+  0% { opacity: 0; transform: translateY(20%); }
+  30% { opacity: 0.3; transform: translateY(10%); }
+  60% { opacity: 0.6; transform: translateY(5%); }
+  100% { opacity: 0; transform: translateY(0); }
+}
+
+/* Fog lifting - gradual clearing */
+.weather-fog-lifting {
+  animation: fog-lift 4s ease-out forwards;
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgba(140, 145, 160, 0.7) 0%, 
+    rgba(160, 165, 180, 0.4) 50%, 
+    rgba(200, 210, 230, 0) 100%
+  );
+}
+
+@keyframes fog-lift {
+  0% { opacity: 0.7; transform: translateY(0); }
+  40% { opacity: 0.5; transform: translateY(-10%); }
+  70% { opacity: 0.3; transform: translateY(-20%); }
+  100% { opacity: 0; transform: translateY(-30%); }
+}
+
+/* Rain to fog transition */
+.weather-rain-to-fog {
+  animation: rain-fog 3s ease-in-out forwards;
+  background: linear-gradient(
+    to bottom, 
+    rgba(80, 100, 130, 0.4) 0%, 
+    rgba(140, 150, 170, 0.6) 100%
+  );
+}
+
+@keyframes rain-fog {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.6; }
+  100% { opacity: 0; }
+}
+
+/* Snow beginning - flakes start falling */
+.weather-snow-beginning {
+  animation: snow-begin 4s ease-in forwards;
+  background: radial-gradient(
+    ellipse at 50% 0%, 
+    rgba(180, 200, 230, 0) 0%, 
+    rgba(200, 220, 245, 0.3) 50%, 
+    rgba(210, 230, 255, 0.5) 100%
+  );
+}
+
+@keyframes snow-begin {
+  0% { opacity: 0; }
+  30% { opacity: 0.3; }
+  60% { opacity: 0.5; }
+  100% { opacity: 0; }
+}
+
+/* Snow melting - warmth returns */
+.weather-snow-melting {
+  animation: snow-melt 3.5s ease-out forwards;
+  background: radial-gradient(
+    circle at 50% 50%, 
+    rgba(210, 230, 255, 0.5) 0%, 
+    rgba(220, 235, 255, 0.3) 50%, 
+    rgba(240, 245, 255, 0) 100%
+  );
+}
+
+@keyframes snow-melt {
+  0% { opacity: 0.5; }
+  40% { opacity: 0.3; }
+  70% { opacity: 0.15; }
+  100% { opacity: 0; }
+}
+
+/* Fog to snow - crystallization */
+.weather-fog-to-snow {
+  animation: fog-snow 3s ease-in-out forwards;
+  background: linear-gradient(
+    to bottom, 
+    rgba(160, 180, 210, 0.5) 0%, 
+    rgba(200, 220, 245, 0.7) 100%
+  );
+}
+
+@keyframes fog-snow {
+  0% { opacity: 0.5; filter: blur(8px); }
+  50% { opacity: 0.6; filter: blur(4px); }
+  100% { opacity: 0; filter: blur(0px); }
+}
+
+/* Wind picking up - movement increases */
+.weather-wind-picking-up {
+  animation: wind-pickup 2.5s ease-in forwards;
+  background: linear-gradient(
+    90deg, 
+    rgba(100, 120, 140, 0) 0%, 
+    rgba(120, 140, 160, 0.3) 50%, 
+    rgba(100, 120, 140, 0) 100%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes wind-pickup {
+  0% { 
+    opacity: 0; 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    opacity: 0.4; 
+    background-position: 100% 50%; 
+  }
+  100% { 
+    opacity: 0; 
+    background-position: 200% 50%; 
+  }
+}
+
+/* Wind dying - calm returns */
+.weather-wind-dying {
+  animation: wind-die 2.5s ease-out forwards;
+  background: linear-gradient(
+    90deg, 
+    rgba(120, 140, 160, 0) 0%, 
+    rgba(140, 160, 180, 0.3) 50%, 
+    rgba(120, 140, 160, 0) 100%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes wind-die {
+  0% { 
+    opacity: 0.4; 
+    background-position: 0% 50%; 
+  }
+  50% { 
+    opacity: 0.2; 
+    background-position: 50% 50%; 
+  }
+  100% { 
+    opacity: 0; 
+    background-position: 100% 50%; 
+  }
+}
+
+/* Wind to storm - escalation */
+.weather-wind-to-storm {
+  animation: wind-storm 3s ease-in forwards;
+  background: radial-gradient(
+    ellipse at 50% 0%, 
+    rgba(60, 70, 90, 0) 0%, 
+    rgba(40, 50, 70, 0.5) 50%, 
+    rgba(20, 30, 50, 0.8) 100%
+  );
+}
+
+@keyframes wind-storm {
+  0% { opacity: 0; }
+  20% { opacity: 0.3; }
+  45%, 47% { opacity: 0.5; } /* Lightning */
+  65%, 68% { opacity: 0.7; } /* Lightning */
+  100% { opacity: 0; }
+}
+
+/* Phase 3D: Time Stop Animation - The World */
+@keyframes expand-circle {
+  0% {
+    clip-path: circle(0% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(150% at 50% 50%);
+  }
+}
+
+@keyframes collapse-circle {
+  0% {
+    clip-path: circle(150% at 50% 50%);
+  }
+  100% {
+    clip-path: circle(0% at 50% 50%);
+  }
+}
+
+/* Phase 5 v27: Gear 5 Neon Contour Animation */
+@keyframes gear5-neon-pulse {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+                0 0 10px rgba(255, 255, 255, 0.6),
+                0 0 15px rgba(255, 255, 255, 0.4),
+                inset 0 0 5px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+  25% {
+    box-shadow: 0 0 8px rgba(255, 255, 200, 0.9),
+                0 0 15px rgba(255, 255, 200, 0.7),
+                0 0 20px rgba(255, 255, 150, 0.5),
+                inset 0 0 8px rgba(255, 255, 200, 0.4);
+    border-color: rgba(255, 255, 200, 0.95);
+  }
+  50% {
+    box-shadow: 0 0 10px rgba(255, 255, 100, 1),
+                0 0 20px rgba(255, 255, 100, 0.8),
+                0 0 30px rgba(255, 200, 0, 0.6),
+                inset 0 0 10px rgba(255, 255, 100, 0.5);
+    border-color: rgba(255, 255, 100, 1);
+  }
+  75% {
+    box-shadow: 0 0 8px rgba(255, 255, 200, 0.9),
+                0 0 15px rgba(255, 255, 200, 0.7),
+                0 0 20px rgba(255, 255, 150, 0.5),
+                inset 0 0 8px rgba(255, 255, 200, 0.4);
+    border-color: rgba(255, 255, 200, 0.95);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.8),
+                0 0 10px rgba(255, 255, 255, 0.6),
+                0 0 15px rgba(255, 255, 255, 0.4),
+                inset 0 0 5px rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+}
+
+/* Phase 5 v29: Word-by-Word Animation Keyframes for High Emotional Valence */
+@keyframes fade-in-word {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-word {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes shake-word {
+  0%, 100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+  25% {
+    opacity: 1;
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+@keyframes tremble-word {
+  0%, 100% {
+    opacity: 0;
+    transform: translate(0, 0);
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    transform: translate(-2px, 2px);
+  }
+  60% {
+    transform: translate(2px, -2px);
+  }
+  80% {
+    transform: translate(-1px, 1px);
+  }
+}
+
+@keyframes glow-word {
+  0% {
+    opacity: 0;
+    filter: brightness(1) drop-shadow(0 0 0px currentColor);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.3) drop-shadow(0 0 12px currentColor);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1) drop-shadow(0 0 6px currentColor);
+  }
+}
+
+@keyframes shimmer-word {
+  0% {
+    opacity: 0;
+    filter: brightness(1);
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    filter: brightness(1.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+@keyframes scale-word {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fade-slow-word {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in-word {
+  animation: fade-in-word 0.4s ease-out;
+}
+
+.animate-bounce-word {
+  animation: bounce-word 0.6s ease-out;
+}
+
+.animate-shake-word {
+  animation: shake-word 0.5s ease-out;
+}
+
+.animate-tremble-word {
+  animation: tremble-word 0.7s ease-out;
+}
+
+.animate-glow-word {
+  animation: glow-word 0.8s ease-out;
+}
+
+.animate-shimmer-word {
+  animation: shimmer-word 0.9s ease-out;
+}
+
+.animate-scale-word {
+  animation: scale-word 0.5s ease-out;
+}
+
+.animate-fade-slow-word {
+  animation: fade-slow-word 1s ease-out;
+}
+
+/* ========================================
+ * ENVIRONMENT NARRATION STYLING
+ * Middle-bubble styles for world events
+ * ======================================== */
+.middle-bubble {
+  background: rgba(50, 50, 70, 0.3);
+  border: 1px solid rgba(142, 142, 180, 0.2);
+  font-style: italic;
+  text-align: center;
+  margin: 1rem auto;
+  max-width: 80%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  backdrop-filter: blur(8px);
+  color: rgba(200, 200, 220, 0.8);
+}
