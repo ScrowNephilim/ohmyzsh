@@ -1,4 +1,5 @@
 # Plugin owners
+
 plugins/archlinux/                  @ratijas
 plugins/dbt/                        @msempere
 plugins/eza/                        @pepoluan
